@@ -2,12 +2,12 @@
 
 class creditCard 
 {
-    public $numero;
-    public $cvc;
-    public $scadenza;
+    private $numero;
+    private $cvc;
+    private $scadenza;
 
     public function checkValidity(){
-        if(is_numeric($numero) && strlen($numero) == 16){
+        if(is_numeric($this->numero) && strlen($this->numero) == 16){
             echo "il numero è corretto";
         } else {
             echo "Verificare la correttezza dei dati";
@@ -15,7 +15,7 @@ class creditCard
     }
 
     public function checkCvc(){
-        if(is_numeric($cvc) && strlen($cvc) == 3){
+        if(is_numeric($this->cvc) && strlen($this->cvc) == 3){
             echo "il numero è corretto";
         } else {
             echo "Verificare la correttezza dei dati";
@@ -23,7 +23,7 @@ class creditCard
     }
 
     public function checkScadenza(){
-        if(checkdate($scadenza) && date('m/Y') < $scadenza){
+        if(checkdate($this->scadenza) && date('m/Y') < $this->scadenza){
             echo "Ok i dati sono completi";
         } else {
             echo "Verificare la correttezza dei dati";
@@ -38,8 +38,7 @@ class creditCard
     }
 }
 
-$carta = new creditCard (intval('0058912334216196'), 295, '01/25');
-var_dump($carta) ;
+
 
 
 ?>

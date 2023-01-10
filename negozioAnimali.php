@@ -16,8 +16,7 @@ class Negozio
     }
 }
 
-$shop = new Negozio('croccantini','peluche', 'casetta', 'cane');
-var_dump($shop) ;
+
 
 
 ?>

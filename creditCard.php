@@ -23,7 +23,7 @@ class creditCard
     }
 
     public function checkScadenza(){
-        if(checkdate($this->scadenza) && date('m/Y') < $this->scadenza){
+        if(date('m/Y') < $this->scadenza){
             echo "Ok i dati sono completi";
         } else {
             echo "Verificare la correttezza dei dati";

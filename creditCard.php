@@ -38,8 +38,8 @@ class creditCard
     }
 }
 
-$cartaDiCredito = new creditCard (0058912334216196, 295, '01/25');
-echo $cartaDiCredito;
+$carta = new creditCard (intval('0058912334216196'), 295, '01/25');
+var_dump($carta) ;
 
 
 ?>

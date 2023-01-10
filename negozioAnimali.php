@@ -17,7 +17,7 @@ class Negozio
 }
 
 $shop = new Negozio('croccantini','peluche', 'casetta', 'cane');
-echo $shop;
+var_dump($shop) ;
 
 
 ?>
